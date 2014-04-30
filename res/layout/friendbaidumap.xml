@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fcfcfc"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn_back"
+            android:onClick="find_back"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="朋友的位置"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+	<RelativeLayout
+	    android:id="@+id/RelativeLayout1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+
+	    <com.baidu.mapapi.map.MapView 
+            android:id="@+id/bmapsView"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_above="@+id/rl_layout"
+	        android:layout_weight="1.53" />
+
+
+	    <RelativeLayout
+	        android:id="@+id/rl_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="45dp"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:background="@drawable/title_bar"
+	        android:gravity="center"
+	        android:orientation="vertical" >
+
+	        <Button
+	            android:id="@+id/car_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_toRightOf="@+id/bus_btn"
+	            android:onClick="car_click"
+	            android:text="驾车线路" />
+
+	        <Button
+	            android:id="@+id/walk_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_toRightOf="@+id/car_btn"
+	            android:onClick="walk_click"
+	            android:text="步行线路" />
+
+	        <Button
+	            android:id="@+id/bus_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+	            android:onClick="bus_click"
+	            android:text="公交线路" />
+
+	        <Button
+	            android:id="@+id/car_gps_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_alignParentTop="true"
+	            android:onClick="car_gps_click"
+	            android:text="启动百度导航" />
+
+	    </RelativeLayout>
+
+	</RelativeLayout>
+</LinearLayout>

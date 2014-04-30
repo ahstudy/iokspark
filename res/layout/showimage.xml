@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFDAB9"
+    android:orientation="vertical" >
+        
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn_back"
+            android:onClick="find_back"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/newstitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="图片浏览"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/picupload"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/title_btn_right"
+            android:onClick="upload_pic"
+            android:text="发送"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+	<RelativeLayout
+	    android:id="@+id/RelativeLayout1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	     >
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:gravity="center"
+		    android:layout_above="@id/rl_layout"
+		    android:orientation="vertical" >
+
+		    <it.sephiroth.android.library.imagezoom.ImageViewTouch
+		        android:id="@+id/showimage"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_gravity="center_horizontal"
+		        android:scaleType="centerInside" />
+		</LinearLayout>
+	    
+	   <RelativeLayout
+	        android:id="@+id/rl_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="45dp"
+	        android:background="@drawable/title_bar"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
+	        android:orientation="vertical" >
+			<Button
+		        android:id="@+id/left_rotate_btn"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:onClick="leftrotate"
+		        android:text="顺时针" >
+		    </Button>
+
+		    <Button
+		        android:id="@+id/right_rotate_btn"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignParentTop="true"
+		        android:onClick="rightrotate"
+		        android:text="逆时间" />
+	        
+	    </RelativeLayout>
+
+	   
+
+	</RelativeLayout>
+    
+ </LinearLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+           
+        <RelativeLayout 
+  			android:layout_width="fill_parent"
+  			android:layout_height="45dp"
+  			android:id="@+id/title" 
+  			android:background="@drawable/title_bar"
+  			android:gravity="center_vertical"  >
+  			<Button
+            	android:id="@+id/reback_btn"
+            	android:layout_width="70dp"
+            	android:layout_height="wrap_content"
+            	android:layout_centerVertical="true"
+            	android:text="返回"
+            	android:textSize="14sp"
+            	android:textColor="#fff"
+            	android:onClick="btn_back"
+           		android:background="@drawable/title_btn_back"/>  
+      		<TextView
+        		android:layout_width="wrap_content" 
+        		android:layout_height="wrap_content" 
+        		android:text="详细资料"
+        		android:layout_centerInParent="true"
+        		android:textSize="20sp"		
+				android:textColor="#ffffff" /> 
+			<ImageButton 
+			    android:layout_width="67dp" 
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentRight="true" 
+        		android:layout_centerVertical="true"
+        		android:layout_marginRight="5dp"
+        		android:src="@drawable/mm_title_btn_menu"
+				android:background="@drawable/title_btn_right"
+			    />      
+		</RelativeLayout>
+		
+    <ScrollView
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:scrollbarStyle="outsideOverlay"  >
+			
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="0dp" >
+			
+            <ImageView
+      		    	android:id="@+id/userhead"
+            		android:layout_width="120dp"
+        			android:layout_height="120dp"        	     	
+        			android:layout_centerVertical="true"
+        			android:layout_alignParentLeft="true"        			
+        			android:layout_marginLeft="8dp"
+        			android:padding="8dp"
+        			android:src="@drawable/xiaohei"
+        			android:onClick="head_xiaohei" /> 
+        			
+            <TextView
+                	android:id="@+id/username"
+        			android:layout_width="wrap_content" 
+        			android:layout_height="wrap_content"
+        			android:layout_alignParentTop="true"
+        			android:layout_alignParentLeft="true"
+        			android:layout_marginLeft="95dp"
+        			android:padding="15dp" 
+        			android:text=""
+        			android:textSize="18sp"		
+					android:textColor="#000" />
+            <TextView
+                	android:id="@+id/usernick"
+        			android:layout_width="wrap_content" 
+        			android:layout_height="wrap_content"
+        			android:layout_alignParentLeft="true"
+        			android:layout_alignParentBottom="true"
+        			android:layout_marginLeft="95dp"
+        			android:padding="15dp" 
+        			android:text=""
+        			android:textSize="15sp"		
+					android:textColor="#333" /> 
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/cardlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="3dp" >
+			
+         	<RelativeLayout      				    
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"            	
+            	android:gravity="center_vertical"
+            	android:clickable="true"
+            	android:background="@drawable/preference_first_item" >
+      		  <TextView
+        			android:layout_width="wrap_content" 
+        			android:layout_height="wrap_content"
+        			android:layout_centerVertical="true"
+        			android:padding="8dp" 
+        			android:text="性别"
+        			android:textSize="17sp"		
+					android:textColor="#333" /> 
+				<TextView
+				    android:id="@+id/usersex"
+        			android:layout_width="wrap_content" 
+        			android:layout_height="wrap_content"
+        			android:layout_centerVertical="true"
+        			android:layout_alignParentLeft="true"
+        			android:layout_marginLeft="80dp"
+        			android:padding="8dp" 
+        			android:text="男"
+        			android:textSize="15sp"		
+					android:textColor="#000" /> 					
+   		  	</RelativeLayout>
+   		  	<RelativeLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:gravity="center_vertical"
+            		android:clickable="true"
+            		android:background="@drawable/preference_item" >
+            	<TextView
+        			android:layout_width="wrap_content" 
+        			android:layout_height="wrap_content"
+        			android:layout_centerVertical="true"
+        			android:padding="8dp" 
+        			android:text="个性签名"
+        			android:textSize="17sp"		
+					android:textColor="#333" /> 
+				<TextView
+        			android:layout_width="wrap_content" 
+        			android:layout_height="wrap_content"
+        			android:layout_centerVertical="true"
+        			android:layout_alignParentLeft="true"
+        			android:layout_marginLeft="80dp"
+        			android:padding="8dp" 
+        			android:text="这家伙已经无话可说了！！！"
+        			android:textSize="15sp"		
+					android:textColor="#000" /> 			
+      		</RelativeLayout>
+      		<RelativeLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:gravity="center_vertical"
+            		android:clickable="true"
+            		android:background="@drawable/preference_item" >
+            	<TextView
+        			android:layout_width="wrap_content" 
+        			android:layout_height="wrap_content"
+        			android:layout_centerVertical="true"
+        			android:padding="8dp" 
+        			android:text="电话"
+        			android:textSize="17sp"		
+					android:textColor="#333" /> 
+				<TextView
+        			android:layout_width="wrap_content" 
+        			android:layout_height="wrap_content"
+        			android:layout_centerVertical="true"
+        			android:layout_alignParentLeft="true"
+        			android:layout_marginLeft="80dp"
+        			android:padding="8dp" 
+        			android:text=""
+        			android:textSize="15sp"		
+					android:textColor="#000" /> 			
+      		</RelativeLayout>
+      		<RelativeLayout
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:gravity="center_vertical"
+            		android:clickable="true"
+            		android:background="@drawable/preference_last_item" >
+            	<TextView
+        			android:layout_width="wrap_content" 
+        			android:layout_height="wrap_content"
+        			android:layout_centerVertical="true"
+        			android:padding="8dp" 
+        			android:text="个人相册"
+        			android:textSize="17sp"		
+					android:textColor="#333" /> 
+				<ImageView
+				    android:id="@+id/xh_head_img"
+      		    	android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:layout_centerVertical="true"
+        			android:layout_alignParentLeft="true"
+        			android:layout_marginLeft="80dp"
+        			android:padding="8dp"
+        			 />  
+        		<ImageView
+      		    	android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:layout_centerVertical="true"
+        			android:layout_toRightOf="@id/xh_head_img"
+        			
+        			android:layout_marginLeft="0dp"
+        			android:padding="8dp"
+        			 />  	
+        			
+        		<ImageView
+            		android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:layout_centerVertical="true"
+        			android:layout_alignParentRight="true"
+        			android:clickable="true"
+        			android:src="@drawable/mm_submenu" />	
+      		</RelativeLayout>
+      		
+      	
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtnocard"
+            android:layout_marginTop="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="15sp"		
+			android:textColor="#000"
+            android:text="这家伙太不勤快了，啥也没写呀！！" />
+        
+        <Button     
+            android:id="@+id/btnsend"       
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"            
+            android:background="@drawable/btn_style_green"            
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:text="发消息"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:onClick="sendmessage"
+             />
+        <Button       
+            android:id="@+id/btnaddfriend"     
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"            
+            android:background="@drawable/btn_style_green"            
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:text="加好友"
+            android:visibility="gone"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:onClick="addfriend"
+             />
+        <Button    
+            android:id="@+id/btndelfriend"        
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"            
+            android:background="@drawable/btn_style_green"            
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:text="删除好友"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:onClick="delfriend"
+             />
+	</LinearLayout>
+  </ScrollView>
+</LinearLayout>

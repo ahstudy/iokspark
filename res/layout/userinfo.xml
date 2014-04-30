@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#eee"
+        android:orientation="vertical" >
+        
+         <RelativeLayout 
+  			android:layout_width="fill_parent"
+  			android:layout_height="45dp"
+  			android:id="@+id/title" 
+  			android:background="@drawable/title_bar"
+  			android:gravity="center_vertical"  >
+  			<Button
+            	android:id="@+id/login_reback_btn"
+            	android:layout_width="70dp"
+            	android:layout_height="wrap_content"
+            	android:layout_centerVertical="true"
+            	android:text="返回"
+            	android:textSize="14sp"
+            	android:textColor="#fff"
+            	android:onClick="btn_back"
+           		android:background="@drawable/title_btn_back"/>  
+      		<TextView
+        		android:layout_width="wrap_content" 
+        		android:layout_height="wrap_content" 
+        		android:text="个人信息"
+        		android:layout_centerInParent="true"
+        		android:textSize="20sp"		
+				android:textColor="#ffffff" /> 
+			      
+		</RelativeLayout>
+		<ScrollView 
+    		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+    		android:scrollbarStyle="outsideOverlay" 
+    		 >
+        <LinearLayout
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:orientation="vertical" >
+
+        		<RelativeLayout
+        		    android:layout_width="fill_parent"
+        		    android:layout_height="wrap_content"
+        		    android:layout_marginTop="14dp"
+        		    android:background="@drawable/preference_first_item"
+        		    android:clickable="true"
+        		    android:gravity="center_vertical"
+        		    android:onClick="editimg" >
+
+        		    <TextView
+        		        android:id="@+id/textView1"
+        		        android:layout_width="wrap_content"
+        		        android:layout_height="wrap_content"
+        		        android:padding="8dp"
+        		        android:text="头像"
+        		        android:textColor="#000"
+        		        android:textSize="17sp" />
+
+        		    <ImageView
+        		        android:id="@+id/imageView2"
+        		        android:layout_width="wrap_content"
+        		        android:layout_height="wrap_content"
+        		        android:layout_alignParentRight="true"
+        		        android:layout_centerVertical="true"
+        		        android:clickable="true"
+        		        android:scaleType="matrix"
+        		        android:src="@drawable/mm_submenu" />
+
+        		    <ImageView
+        		        android:id="@+id/myuserimg"
+        		        android:layout_width="wrap_content"
+        		        android:layout_height="wrap_content"
+        		        android:layout_alignParentTop="true"
+        		        android:layout_toLeftOf="@+id/imageView2"
+        		        android:src="@drawable/icon" />
+
+        		</RelativeLayout>
+
+				<RelativeLayout
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/preference_item"
+				    android:clickable="true"
+				    android:gravity="center_vertical" >
+
+
+				    <ImageView
+				        android:id="@+id/imageView1"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentRight="true"
+				        android:layout_centerVertical="true"
+				        android:scaleType="matrix"
+				        android:src="@drawable/mm_submenu" />
+
+				    <TextView
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentLeft="true"
+				        android:layout_alignParentTop="true"
+				        android:padding="8dp"
+				        android:text="用户名"
+				        android:textColor="#000"
+				        android:textSize="17sp" />
+
+				    <TextView
+				        android:id="@+id/curusername"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentTop="true"
+				        android:layout_toLeftOf="@+id/imageView1"
+				        android:padding="8dp"
+				        android:text="用户名"
+				        android:textColor="#255"
+				        android:textSize="17sp" />
+
+				</RelativeLayout>
+				<RelativeLayout
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/preference_item"
+				    android:clickable="true"
+				    android:onClick="editnick"
+				    android:gravity="center_vertical" >
+
+
+				    <ImageView
+				        android:id="@+id/imageView1"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentRight="true"
+				        android:layout_centerVertical="true"
+				        android:scaleType="matrix"
+				        android:src="@drawable/mm_submenu" />
+
+				    <TextView
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentLeft="true"
+				        android:layout_alignParentTop="true"
+				        android:padding="8dp"
+				        android:text="昵称"
+				        android:textColor="#000"
+				        android:textSize="17sp" />
+
+				    <TextView
+				        android:id="@+id/curusernick"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentTop="true"
+				        android:layout_toLeftOf="@+id/imageView1"
+				        android:padding="8dp"
+				        android:text="昵称"
+				        android:textColor="#255"
+				        android:textSize="17sp" />
+
+				</RelativeLayout>
+				<RelativeLayout
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/preference_last_item"
+				    android:clickable="true"
+				    android:onClick="editsex"
+				    android:gravity="center_vertical" >
+
+				    <ImageView
+				        android:id="@+id/statepic"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentRight="true"
+				        android:layout_centerVertical="true"
+				        android:scaleType="matrix"
+				        android:src="@drawable/mm_submenu" />
+
+				    <TextView
+				        android:id="@+id/statetxt"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentLeft="true"
+				        android:layout_alignParentTop="true"
+				        android:padding="8dp"
+				        android:text="性别"
+				        android:textColor="#000"
+				        android:textSize="17sp" />
+
+				    <TextView
+				        android:id="@+id/usersex"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentTop="true"
+				        android:layout_toLeftOf="@+id/statepic"
+				        android:padding="8dp"
+				        android:text=""
+				        android:textColor="#255"
+				        android:textSize="17sp" />
+				</RelativeLayout>     	
+        	
+        	</LinearLayout>
+    </ScrollView>
+</LinearLayout>

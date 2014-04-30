@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fcfcfc"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn_back"
+            android:onClick="find_back"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我行视频"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/videoupload"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/title_btn_right"
+            android:onClick="upload_video"
+            android:text="发送"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+	<RelativeLayout
+	    android:id="@+id/RelativeLayout1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+
+
+
+	    <RelativeLayout
+	        android:id="@+id/rl_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="45dp"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:background="@drawable/title_bar"
+	        android:gravity="center"
+	        android:orientation="vertical" >
+
+			<ImageButton
+	            android:id="@+id/camera_switch_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_alignParentLeft="true"
+	            android:src="@drawable/mm_title_btn_camera_switch" />
+	        <Button
+	            android:id="@+id/flashMode"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_alignParentTop="true"
+	            android:text="flash_auto" />
+
+	        <ImageButton
+	            android:id="@+id/button_capture"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_centerHorizontal="true"
+	            android:gravity="center"
+	            android:onClick="play"
+	            android:src="@drawable/camera_btn" />
+
+	    </RelativeLayout>
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:gravity="center"
+		    android:layout_above="@id/rl_layout"
+		    android:orientation="vertical" >
+
+		    <it.sephiroth.android.library.imagezoom.ImageViewTouch
+		        android:id="@+id/ShowVideo"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_gravity="center_horizontal"
+		        android:src="@drawable/friends_sends_pictures_no" 
+		        android:scaleType="centerInside" />
+		</LinearLayout>
+	</RelativeLayout>
+</LinearLayout>
